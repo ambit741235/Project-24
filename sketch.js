@@ -19,10 +19,11 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
+	hammer = new Hammer(50,50);
 	plane = new Plane(400,700,1200,50);
 	rubber = new Rubber(700,500,30);
 	stone = new Stone(100,500,100,100);
-	hammer = new Hammer(50,50);
+	
 
 	sand1 = new Sand(500,500,5);
 	sand2 = new Sand(200,500,5);
@@ -33,7 +34,7 @@ function setup() {
 
 	iron = new Iron(450,500,150,90);
 
-	Engine.run(engine);
+	//Engine.run(engine);
   
 }
 
@@ -42,10 +43,11 @@ function draw() {
 	background("lightblue");
 	Engine.update(engine);
 
+	hammer.display();
 	plane.display();
 	rubber.display();
 	stone.display();
-	hammer.display();
+	
 
 	sand1.display();
 	sand2.display();
